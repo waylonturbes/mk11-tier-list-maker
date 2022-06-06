@@ -1,0 +1,16 @@
+/* Theme Overides */
+:root {
+  font-family: "Inter", "Roboto", sans-serif;
+}
+
+/* Custom Styles */
+.nav-list {
+  padding: 0px 0px 0px 0px;
+}
+
+.nav-list li {
+  display: inline;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
