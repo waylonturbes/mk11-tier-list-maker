@@ -25,18 +25,18 @@
 
 /* Custom Styles */
 body {
-  max-width: 55.83rem;
+  max-width: 55.84rem;
 }
 
 .nav-list {
-  padding: 0px 0px 0px 0px;
+  padding: 0rem;
 }
 
 .nav-list li {
   display: inline;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 .tier-heading {
@@ -44,11 +44,19 @@ body {
 }
 
 .tier-section {
-  min-height: 6.325rem;
-  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 6.625rem;
+  padding: 0rem;
+}
+
+.tier-section--over {
+  padding: 0rem;
+  background-color: rgb(255 255 255 / 10%);
 }
 
 .character-img {
+  display: block;
   border: 0.0625rem solid var(--text-main);
   height: 6.25rem;
   margin: 0.125rem;
