@@ -1,9 +1,33 @@
 /* Theme Overides */
 :root {
   font-family: "Inter", "Roboto", sans-serif;
+  /* --animation-duration: ; */
+  /* --background-alt: ; */
+  /* --background-body: ; */
+  /* --background: ; */
+  /* --border: ; */
+  /* --button-hover: ; */
+  /* --code: ; */
+  /* --focus: ; */
+  /* --form-placeholder: ; */
+  /* --form-text: ; */
+  /* --highlight: ; */
+  /* --links: ; */
+  /* --scrollbar-thumb-hover: ; */
+  /* --scrollbar-thumb: ; */
+  /* --select-arrow: ; */
+  /* --selection: ; */
+  /* --text-bright: ; */
+  /* --text-main: ; */
+  /* --text-muted: ; */
+  /* --variable: ; */
 }
 
 /* Custom Styles */
+body {
+  max-width: 55.83rem;
+}
+
 .nav-list {
   padding: 0px 0px 0px 0px;
 }
@@ -11,6 +35,25 @@
 .nav-list li {
   display: inline;
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+.tier-heading {
+  margin: 0.5rem;
+}
+
+.tier-section {
+  min-height: 6.325rem;
+  padding: 0px 0px 0px 0px;
+}
+
+.character-img {
+  border: 0.0625rem solid var(--text-main);
+  height: 6.25rem;
+  margin: 0.125rem;
+}
+
+.svg {
+  color: var(--text-main);
 }
