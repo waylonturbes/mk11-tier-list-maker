@@ -49,6 +49,7 @@ body {
   flex-wrap: wrap;
   min-height: calc(var(--character-height) + 0.375rem);
   padding: 0rem;
+  margin: 0rem 0.195rem 0rem 0.195rem;
 }
 
 .tier-section--over {
@@ -67,7 +68,6 @@ body {
   z-index: 1;
   background: rgb(55, 0, 0, 0.15);
   box-shadow: 0rem 0rem 0.125rem red;
-  transition: all 0.18s ease-in-out;
 }
 
 .character-img-wrapper::before {
@@ -85,17 +85,13 @@ body {
     rgba(255, 20, 20, 1) 100%
   );
   z-index: -1;
-  transition: opacity 0.25s ease-out;
+  transition: all 0.2s ease-out;
   opacity: 0;
 }
 
 .character-img-wrapper:hover::before {
   box-shadow: 0rem 0rem 0.625rem red;
   opacity: 1;
-}
-
-.character-img-wrapper:active {
-  transition: all 0.18s ease-in-out;
 }
 
 .character-img {
