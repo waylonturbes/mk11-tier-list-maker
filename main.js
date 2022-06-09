@@ -53,17 +53,22 @@ function generateKombatants(kombatantsArr) {
     const kombatantImg = document.createElement("img");
 
     kombatantImgWrapper.setAttribute("class", "character-img-wrapper");
+    kombatantImgWrapper.setAttribute("id", kombatant);
+    kombatantImgWrapper.setAttribute("draggable", "true");
     kombatantImg.setAttribute(
       "src",
       `https://cdn-prod.mortalkombat.com/roster/${kombatant}/thumb-p.png`
     );
     kombatantImg.setAttribute("alt", kombatant);
-    kombatantImg.setAttribute("id", kombatant);
     kombatantImg.setAttribute("class", "character-img");
-    kombatantImg.setAttribute("draggable", "true");
 
-    kombatantImg.addEventListener("dragstart", (event) => {
+    kombatantImgWrapper.addEventListener("dragstart", (event) => {
       event.dataTransfer.setData("text/plain", kombatant);
+      event.target.classList.add("dragging");
+    });
+
+    kombatantImgWrapper.addEventListener("dragend", (event) => {
+      event.target.classList.remove("dragging");
     });
 
     kombatantImgWrapper.appendChild(kombatantImg);
@@ -85,6 +90,12 @@ function configureTierSectionDropZones() {
       dropZone.classList.add("tier-section--over");
     });
 
+    dropZone.addEventListener("dragleave", (event) => {
+      event.preventDefault();
+
+      dropZone.classList.remove("tier-section--over");
+    });
+
     dropZone.addEventListener("drop", (event) => {
       event.preventDefault();
 
@@ -92,6 +103,7 @@ function configureTierSectionDropZones() {
       const droppedElement = document.getElementById(droppedElementId);
 
       dropZone.appendChild(droppedElement);
+      dropZone.classList.remove("tier-section--over");
     });
   }
 }
